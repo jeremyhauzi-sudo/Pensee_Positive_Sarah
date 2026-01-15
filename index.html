@@ -6,40 +6,62 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 600px;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #dbeafe, #f0f9ff);
+    }
+
+    .container {
+      max-width: 720px;   /* un peu plus large */
       margin: 40px auto;
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
+
     h2 {
-      margin-bottom: 5px;
+      margin-bottom: 8px;
+      margin-top: 30px;
+      font-weight: 500;
     }
+
+    h2:first-child {
+      margin-top: 0;
+    }
+
     audio {
       width: 100%;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
 
-<h2>🎧 01 Relax et détente</h2>
-<audio controls>
-  <source src="01 Relax et détente.mp3" type="audio/mpeg">
-</audio>
+<div class="container">
 
-<h2>🎧 02 Réaliser ses aspirations</h2>
-<audio controls>
-  <source src="02 Réaliser ses aspirations.mp3" type="audio/mpeg">
-</audio>
+  <h2>🎧 01 Relax et détente</h2>
+  <audio controls>
+    <source src="01 Relax et détente.mp3" type="audio/mpeg">
+  </audio>
 
-<h2>🎧 04 Pardonner l'autre et se rapprocher</h2>
-<audio controls>
-  <source src="04 Pardonner l'autre et se rapprocher.mp3" type="audio/mpeg">
-</audio>
+  <h2>🎧 02 Réaliser ses aspirations</h2>
+  <audio controls>
+    <source src="02 Réaliser ses aspirations.mp3" type="audio/mpeg">
+  </audio>
 
-<h2>🎧 05 Pardonner l'autre et se séparer</h2>
-<audio controls>
-  <source src="05 Pardonner l'autre et se séparer.mp3" type="audio/mpeg">
-</audio>
+  <h2>🎧 04 Pardonner l'autre et se rapprocher</h2>
+  <audio controls>
+    <source src="04 Pardonner l'autre et se rapprocher.mp3" type="audio/mpeg">
+  </audio>
 
+  <h2>🎧 05 Pardonner l'autre et se séparer</h2>
+  <audio controls>
+    <source src="05 Pardonner l'autre et se séparer.mp3" type="audio/mpeg">
+  </audio>
+
+</div>
 
 </body>
 </html>
