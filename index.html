@@ -2,18 +2,28 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- important mobile -->
   <title>Pensée Positive</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      background: linear-gradient(135deg, #dbeafe, #f0f9ff);
-    }
+   body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.6) 0 2px, transparent 3px),
+    radial-gradient(circle at 80% 40%, rgba(255,255,255,0.5) 0 2px, transparent 3px),
+    radial-gradient(circle at 50% 70%, rgba(255,255,255,0.4) 0 1.5px, transparent 3px),
+    radial-gradient(circle at 10% 80%, rgba(255,255,255,0.5) 0 2px, transparent 3px),
+    linear-gradient(135deg, #f9a8d4, #fbcfe8, #f472b6);
+
+  background-size: 120px 120px, 150px 150px, 100px 100px, 180px 180px, 100% 100%;
+}
+
 
     .container {
-      max-width: 720px;   /* un peu plus large */
+      max-width: 720px;
       margin: 40px auto;
       background: white;
       padding: 30px 40px;
@@ -21,19 +31,48 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
 
-    h2 {
-      margin-bottom: 8px;
-      margin-top: 30px;
-      font-weight: 500;
+    /* Chaque piste dans un bloc */
+    .track {
+      padding: 14px 14px 10px;
+      border-radius: 12px;
+      background: #f8fafc;
+      border: 1px solid rgba(0,0,0,0.06);
+      margin-top: 14px;
     }
 
-    h2:first-child {
-      margin-top: 0;
+    h2 {
+      margin: 0 0 10px 0;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 1.2;
     }
 
     audio {
       width: 100%;
-      margin-bottom: 10px;
+      display: block;
+    }
+
+    /* --- Optimisation smartphone --- */
+    @media (max-width: 600px) {
+      .container {
+        margin: 16px;
+        padding: 16px;
+        border-radius: 14px;
+      }
+
+      h2 {
+        font-size: 16px;
+      }
+
+      .track {
+        padding: 12px;
+      }
+
+      /* Sur mobile, on garde le player bien “plein largeur” */
+      audio {
+        width: 100%;
+        max-width: 100%;
+      }
     }
   </style>
 </head>
@@ -41,59 +80,75 @@
 
 <div class="container">
 
-  <h2>🎧 01 Relax et détente</h2>
-  <audio controls>
-    <source src="01 Relax et détente.mp3" type="audio/mpeg">
-  </audio>
+  <div class="track">
+    <h2>🎧 01 Relax et détente</h2>
+    <audio controls preload="none">
+      <source src="01 Relax et détente.mp3" type="audio/mpeg">
+    </audio>
+  </div>
 
-  <h2>🎧 02 Réaliser ses aspirations</h2>
-  <audio controls>
-    <source src="02 Réaliser ses aspirations.mp3" type="audio/mpeg">
-  </audio>
-  
+  <div class="track">
+    <h2>🎧 02 Réaliser ses aspirations</h2>
+    <audio controls preload="none">
+      <source src="02 Réaliser ses aspirations.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <div class="track">
     <h2>🎧 03 Estime de soi</h2>
-  <audio controls>
-    <source src="03 Estime de soi.mp3" type="audio/mpeg">
-  </audio>
+    <audio controls preload="none">
+      <source src="03 Estime de soi.mp3" type="audio/mpeg">
+    </audio>
+  </div>
 
+  <div class="track">
+    <h2>🎧 04 Pardonner l'autre et se rapprocher</h2>
+    <audio controls preload="none">
+      <source src="04 Pardonner l'autre et se rapprocher.mp3" type="audio/mpeg">
+    </audio>
+  </div>
 
-  <h2>🎧 04 Pardonner l'autre et se rapprocher</h2>
-  <audio controls>
-    <source src="04 Pardonner l'autre et se rapprocher.mp3" type="audio/mpeg">
-  </audio>
+  <div class="track">
+    <h2>🎧 05 Pardonner l'autre et se séparer</h2>
+    <audio controls preload="none">
+      <source src="05 Pardonner l'autre et se séparer.mp3" type="audio/mpeg">
+    </audio>
+  </div>
 
-  <h2>🎧 05 Pardonner l'autre et se séparer</h2>
-  <audio controls>
-    <source src="05 Pardonner l'autre et se séparer.mp3" type="audio/mpeg">
-  </audio>
-  
-    <h2>🎧 06 Effacer les peurs du passė</h2>
-  <audio controls>
-    <source src="06 Effacer les peurs du passė.mp3" type="audio/mpeg">
-  </audio>
+  <div class="track">
+    <h2>🎧 06 Effacer les peurs du passé</h2>
+    <audio controls preload="none">
+      <source src="06 Effacer les peurs du passė.mp3" type="audio/mpeg">
+    </audio>
+  </div>
 
+  <div class="track">
+    <h2>🎧 07 Nettoyage et couleurs</h2>
+    <audio controls preload="none">
+      <source src="07 Nettoyage et couleurs.mpeg" type="audio/mpeg">
+    </audio>
+  </div>
 
-  <h2>🎧 07 Nettoyage et couleurs</h2>
-  <audio controls>
-    <source src="07 Nettoyage et couleurs.mpeg" type="audio/mpeg">
-  </audio>
+  <div class="track">
+    <h2>🎧 08 Guérison</h2>
+    <audio controls preload="none">
+      <source src="08 Guérison.mpeg" type="audio/mpeg">
+    </audio>
+  </div>
 
+  <div class="track">
+    <h2>🎧 09 Abondance</h2>
+    <audio controls preload="none">
+      <source src="09 Abondance.mp3" type="audio/mpeg">
+    </audio>
+  </div>
 
-  <h2>🎧 08 Guérison</h2>
-  <audio controls>
-    <source src="08 Guérison.mpeg" type="audio/mpeg">
-  </audio>
-
-  <h2>🎧 09 Abondance</h2>
-  <audio controls>
-    <source src="09 Abondance.mp3" type="audio/mpeg">
-  </audio>
-
-  <h2>🎧 10 Perte de poids</h2>
-  <audio controls>
-    <source src="10 Perte de poids.mpeg" type="audio/mpeg">
-  </audio>
-
+  <div class="track">
+    <h2>🎧 10 Perte de poids</h2>
+    <audio controls preload="none">
+      <source src="10 Perte de poids.mpeg" type="audio/mpeg">
+    </audio>
+  </div>
 
 </div>
 
